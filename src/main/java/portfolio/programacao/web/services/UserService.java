@@ -46,7 +46,6 @@ public class UserService {
         try {
             User existingUser = userRepository.findById(id)
                     .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + id));
-            // Update existingUser with user data
             existingUser.setNome(user.getNome());
             existingUser.setEmail(user.getEmail());
             existingUser.setTelefone(user.getTelefone());
